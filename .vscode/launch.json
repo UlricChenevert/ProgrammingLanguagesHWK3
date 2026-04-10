@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // F5 — builds the lexer, runs all 5 tests, shows pass/fail
+            "name": "Build & Test (F5)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/bin/bash",
+            "args": ["${workspaceFolder}/tools/run_tests.sh"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "preLaunchTask": "build-parser"
+        },
+        {
+            // Debug the lexer interactively — type tokens at the terminal
+            "name": "Debug Lexer (interactive stdin)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/lexer",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "preLaunchTask": "build-lexer",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

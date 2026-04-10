@@ -1,0 +1,23 @@
+{
+    "name": "Flex/Bison C++ Dev",
+    "build": {
+        "dockerfile": "../tools/Dockerfile",
+        "context": ".."
+    },
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-themes"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "C_Cpp.default.compilerPath": "/usr/bin/g++",
+                "C_Cpp.default.cppStandard": "c++17"
+            }
+        }
+    },
+    "remoteUser": "root"
+}

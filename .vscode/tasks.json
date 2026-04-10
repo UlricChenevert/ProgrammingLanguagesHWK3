@@ -1,0 +1,72 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-lexer",
+            "type": "shell",
+            "command": "make -f tools/Makefile build-lexer",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "build-parser",
+            "type": "shell",
+            "command": "make -f tools/Makefile build-parser",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "run-tests",
+            "type": "shell",
+            "command": "bash tools/run_tests.sh",
+            "dependsOn": "build-lexer",
+            "dependsOrder": "sequence",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "update-expected",
+            "type": "shell",
+            "command": "bash tools/run_tests.sh --update",
+            "dependsOn": "build-lexer",
+            "dependsOrder": "sequence",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "make -f tools/Makefile clean",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
