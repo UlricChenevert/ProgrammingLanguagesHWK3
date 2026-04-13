@@ -479,9 +479,9 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "TokenSpec.l"
+#line 1 "puckparser.l"
 /* A starting flex file */ 
-#line 3 "TokenSpec.l"
+#line 3 "puckparser.l"
                    /* ---- PREAMBLE ---- */ 
 #include <iostream> 
 #include <iomanip>
@@ -496,7 +496,7 @@ void display(int index, string tokenType, string lexeme) {
 }
 
 #line 499 "lex.yy.c"
-#line 18 "TokenSpec.l"
+#line 18 "puckparser.l"
                   /* ---- DEFINITIONS ---- */ 
 /* -- Basic Building Blocks -- */
 /* Symbols [~`!@#$%\^&*\(\)_+\-=\{\}|:"<>?\[\]\\;',./\"]  */
@@ -720,7 +720,7 @@ YY_DECL
 		}
 
 	{
-#line 65 "TokenSpec.l"
+#line 65 "puckparser.l"
 
  
 #line 727 "lex.yy.c"
@@ -782,124 +782,124 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 67 "TokenSpec.l"
+#line 67 "puckparser.l"
 ; 
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 68 "TokenSpec.l"
+#line 68 "puckparser.l"
 { line_num++; token_count++; } 
 	YY_BREAK
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 69 "TokenSpec.l"
+#line 69 "puckparser.l"
 { line_num++; token_count++; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 71 "TokenSpec.l"
+#line 71 "puckparser.l"
 { display(token_count, "T_INTEGER", yytext); token_count++; return T_INTEGER; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 72 "TokenSpec.l"
+#line 72 "puckparser.l"
 { display(token_count, "T_DECIMAL", yytext); token_count++; return T_DECIMAL; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 73 "TokenSpec.l"
+#line 73 "puckparser.l"
 { display(token_count, "T_STRING", yytext);  token_count++; return T_STRING; }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 75 "TokenSpec.l"
+#line 75 "puckparser.l"
 { display(token_count, "K_IF", yytext);         token_count++; return K_IF;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 76 "TokenSpec.l"
+#line 76 "puckparser.l"
 { display(token_count, "K_THEN", yytext);       token_count++; return K_THEN;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 77 "TokenSpec.l"
+#line 77 "puckparser.l"
 { display(token_count, "K_ELSE", yytext);       token_count++; return K_ELSE;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 78 "TokenSpec.l"
+#line 78 "puckparser.l"
 { display(token_count, "K_SC", yytext);         token_count++; return K_SC;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 79 "TokenSpec.l"
+#line 79 "puckparser.l"
 { display(token_count, "K_WHILE", yytext);      token_count++; return K_WHILE;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 80 "TokenSpec.l"
+#line 80 "puckparser.l"
 { display(token_count, "K_DO", yytext);         token_count++; return K_DO;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 81 "TokenSpec.l"
+#line 81 "puckparser.l"
 { display(token_count, "K_END", yytext);        token_count++; return K_END;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 82 "TokenSpec.l"
+#line 82 "puckparser.l"
 { display(token_count, "K_LPAREN", yytext);    token_count++; return K_LPAREN;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 83 "TokenSpec.l"
+#line 83 "puckparser.l"
 { display(token_count, "K_RPAREN", yytext);     token_count++; return K_RPAREN;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 84 "TokenSpec.l"
+#line 84 "puckparser.l"
 { display(token_count, "K_WRITE", yytext);      token_count++; return K_WRITE;}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 86 "TokenSpec.l"
+#line 86 "puckparser.l"
 { display(token_count, "OP_ASSIGN", yytext);   token_count++; return OP_ASSIGN;}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 87 "TokenSpec.l"
+#line 87 "puckparser.l"
 { display(token_count, "OP_NEG", yytext);      token_count++; return OP_NEG;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 88 "TokenSpec.l"
+#line 88 "puckparser.l"
 { display(token_count, "OP_RELATION", yytext); token_count++; return OP_RELATION;}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 89 "TokenSpec.l"
+#line 89 "puckparser.l"
 { display(token_count, "OP_ADD", yytext);      token_count++; return OP_ADD;}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 90 "TokenSpec.l"
+#line 90 "puckparser.l"
 { display(token_count, "OP_MULT", yytext);     token_count++; return OP_MULT;}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 93 "TokenSpec.l"
+#line 93 "puckparser.l"
 { display(token_count, "T_IDENT", yytext);     token_count++; return T_IDENT;}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 94 "TokenSpec.l"
+#line 94 "puckparser.l"
 { display(token_count, "?", yytext);           token_count++; return 0;}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 96 "TokenSpec.l"
+#line 96 "puckparser.l"
 ECHO;
 	YY_BREAK
 #line 906 "lex.yy.c"
@@ -1907,7 +1907,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 96 "TokenSpec.l"
+#line 96 "puckparser.l"
 
 
 // int main() 

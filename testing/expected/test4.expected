@@ -1,4 +1,4 @@
-0: TOKEN: T_IDENT    LEXEME: void
-1: TOKEN: T_IDENT    LEXEME: main
+TOKEN: T_IDENT       LEXEME: void
+TOKEN: T_IDENT       LEXEME: main
 ERROR: In line 1 with token 'main'
 INVALID!

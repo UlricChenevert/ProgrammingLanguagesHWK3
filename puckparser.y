@@ -105,8 +105,8 @@ int main()
   failcode = yyparse(); 
  
   if (failcode) 
-    cout << "INVALID!"; 
+    cout << "INVALID!" << endl; 
   else 
-    cout << "VALID"; 
+    cout << "VALID" << endl; 
   return 0; 
 } 

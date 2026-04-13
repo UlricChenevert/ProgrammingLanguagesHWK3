@@ -1,85 +1,85 @@
-0: TOKEN: T_IDENT    LEXEME: x
-1: TOKEN: OP_ASSIGN  LEXEME: :=
-2: TOKEN: T_INTEGER  LEXEME: 1
+TOKEN: T_IDENT       LEXEME: x
+TOKEN: OP_ASSIGN     LEXEME: :=
+TOKEN: T_INTEGER     LEXEME: 1
 RULE: Factor ::= T_INTEGER
-3: TOKEN: K_SC       LEXEME: ;
+TOKEN: K_SC          LEXEME: ;
 RULE: Term ::= Factor
 RULE: SimpleExpression ::= Term
 RULE: Expression ::= SimpleExpression
 RULE: Assignment ::= identifier := Expression
 RULE: Statement ::= Assignment
-5: TOKEN: T_IDENT    LEXEME: y
-6: TOKEN: OP_ASSIGN  LEXEME: :=
-7: TOKEN: T_INTEGER  LEXEME: 2
+TOKEN: T_IDENT       LEXEME: y
+TOKEN: OP_ASSIGN     LEXEME: :=
+TOKEN: T_INTEGER     LEXEME: 2
 RULE: Factor ::= T_INTEGER
-8: TOKEN: K_SC       LEXEME: ;
+TOKEN: K_SC          LEXEME: ;
 RULE: Term ::= Factor
 RULE: SimpleExpression ::= Term
 RULE: Expression ::= SimpleExpression
 RULE: Assignment ::= identifier := Expression
 RULE: Statement ::= Assignment
-10: TOKEN: T_IDENT    LEXEME: c
-11: TOKEN: OP_ASSIGN  LEXEME: :=
-12: TOKEN: T_INTEGER  LEXEME: 3
+TOKEN: T_IDENT       LEXEME: c
+TOKEN: OP_ASSIGN     LEXEME: :=
+TOKEN: T_INTEGER     LEXEME: 3
 RULE: Factor ::= T_INTEGER
-13: TOKEN: K_SC       LEXEME: ;
+TOKEN: K_SC          LEXEME: ;
 RULE: Term ::= Factor
 RULE: SimpleExpression ::= Term
 RULE: Expression ::= SimpleExpression
 RULE: Assignment ::= identifier := Expression
 RULE: Statement ::= Assignment
-15: TOKEN: K_WHILE    LEXEME: WHILE
-16: TOKEN: T_IDENT    LEXEME: c
+TOKEN: K_WHILE       LEXEME: WHILE
+TOKEN: T_IDENT       LEXEME: c
 RULE: Factor ::= T_IDENT
-17: TOKEN: OP_RELATION LEXEME: <
+TOKEN: OP_RELATION   LEXEME: <
 RULE: Term ::= Factor
 RULE: SimpleExpression ::= Term
-18: TOKEN: T_IDENT    LEXEME: n
+TOKEN: T_IDENT       LEXEME: n
 RULE: Factor ::= T_IDENT
-19: TOKEN: K_DO       LEXEME: DO
+TOKEN: K_DO          LEXEME: DO
 RULE: Term ::= Factor
 RULE: SimpleExpression ::= Term
 RULE: Expression ::= SimpleExpression
 RULE: Expression ::= SimpleExpression OP_RELATION Expression
-21: TOKEN: T_IDENT    LEXEME: x
-22: TOKEN: OP_ASSIGN  LEXEME: :=
-23: TOKEN: T_IDENT    LEXEME: x
+TOKEN: T_IDENT       LEXEME: x
+TOKEN: OP_ASSIGN     LEXEME: :=
+TOKEN: T_IDENT       LEXEME: x
 RULE: Factor ::= T_IDENT
-24: TOKEN: OP_ADD     LEXEME: +
+TOKEN: OP_ADD        LEXEME: +
 RULE: Term ::= Factor
-25: TOKEN: T_IDENT    LEXEME: y
+TOKEN: T_IDENT       LEXEME: y
 RULE: Factor ::= T_IDENT
-26: TOKEN: K_SC       LEXEME: ;
-RULE: Term ::= Factor
-RULE: SimpleExpression ::= Term
-RULE: SimpleExpression ::= Term OP_ADD SimpleExpression
-RULE: Expression ::= SimpleExpression
-RULE: Assignment ::= identifier := Expression
-RULE: Statement ::= Assignment
-28: TOKEN: T_IDENT    LEXEME: y
-29: TOKEN: OP_ASSIGN  LEXEME: :=
-30: TOKEN: T_IDENT    LEXEME: x
-RULE: Factor ::= T_IDENT
-31: TOKEN: OP_ADD     LEXEME: -
-RULE: Term ::= Factor
-32: TOKEN: T_IDENT    LEXEME: y
-RULE: Factor ::= T_IDENT
-33: TOKEN: K_SC       LEXEME: ;
+TOKEN: K_SC          LEXEME: ;
 RULE: Term ::= Factor
 RULE: SimpleExpression ::= Term
 RULE: SimpleExpression ::= Term OP_ADD SimpleExpression
 RULE: Expression ::= SimpleExpression
 RULE: Assignment ::= identifier := Expression
 RULE: Statement ::= Assignment
-35: TOKEN: T_IDENT    LEXEME: c
-36: TOKEN: OP_ASSIGN  LEXEME: :=
-37: TOKEN: T_IDENT    LEXEME: c
+TOKEN: T_IDENT       LEXEME: y
+TOKEN: OP_ASSIGN     LEXEME: :=
+TOKEN: T_IDENT       LEXEME: x
 RULE: Factor ::= T_IDENT
-38: TOKEN: OP_ADD     LEXEME: +
+TOKEN: OP_ADD        LEXEME: -
 RULE: Term ::= Factor
-39: TOKEN: T_INTEGER  LEXEME: 1
+TOKEN: T_IDENT       LEXEME: y
+RULE: Factor ::= T_IDENT
+TOKEN: K_SC          LEXEME: ;
+RULE: Term ::= Factor
+RULE: SimpleExpression ::= Term
+RULE: SimpleExpression ::= Term OP_ADD SimpleExpression
+RULE: Expression ::= SimpleExpression
+RULE: Assignment ::= identifier := Expression
+RULE: Statement ::= Assignment
+TOKEN: T_IDENT       LEXEME: c
+TOKEN: OP_ASSIGN     LEXEME: :=
+TOKEN: T_IDENT       LEXEME: c
+RULE: Factor ::= T_IDENT
+TOKEN: OP_ADD        LEXEME: +
+RULE: Term ::= Factor
+TOKEN: T_INTEGER     LEXEME: 1
 RULE: Factor ::= T_INTEGER
-41: TOKEN: K_END      LEXEME: END
+TOKEN: K_END         LEXEME: END
 RULE: Term ::= Factor
 RULE: SimpleExpression ::= Term
 RULE: SimpleExpression ::= Term OP_ADD SimpleExpression
@@ -91,12 +91,12 @@ RULE: StatementSequence ::= Statement ; StatementSequence
 RULE: StatementSequence ::= Statement ; StatementSequence
 RULE: WhileStatement ::= WHILE Expression DO StatementSequence END
 RULE: Statement ::= WhileStatement
-42: TOKEN: K_SC       LEXEME: ;
-44: TOKEN: K_WRITE    LEXEME: WRITE
-45: TOKEN: K_LPAREN   LEXEME: (
-46: TOKEN: T_IDENT    LEXEME: x
+TOKEN: K_SC          LEXEME: ;
+TOKEN: K_WRITE       LEXEME: WRITE
+TOKEN: K_LPAREN      LEXEME: (
+TOKEN: T_IDENT       LEXEME: x
 RULE: Factor ::= T_IDENT
-47: TOKEN: K_RPAREN   LEXEME: )
+TOKEN: K_RPAREN      LEXEME: )
 RULE: Term ::= Factor
 RULE: SimpleExpression ::= Term
 RULE: Expression ::= SimpleExpression
