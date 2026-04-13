@@ -7,8 +7,8 @@ BISON    = bison
 CXXFLAGS = -Wall
 
 # Source files (workspace root)
-LEX_SRC    = TokenSpec.l
-PARSER_SRC = ParserSpec.y
+LEX_SRC    = puckparser.l
+PARSER_SRC = puckparser.y
 
 # Generated intermediates
 LEX_C    = lex.yy.c

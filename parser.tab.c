@@ -67,7 +67,7 @@
 
 
 /* First part of user prologue.  */
-#line 5 "ParserSpec.y"
+#line 5 "puckparser.y"
  
 #include <iostream> 
 using namespace std; 
@@ -1116,139 +1116,139 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* StatementSequence: Statement  */
-#line 50 "ParserSpec.y"
+#line 50 "puckparser.y"
                       { cout << "RULE: StatementSequence ::= Statement" << endl; }
 #line 1122 "parser.tab.c"
     break;
 
   case 3: /* StatementSequence: Statement K_SC StatementSequence  */
-#line 52 "ParserSpec.y"
+#line 52 "puckparser.y"
                       { cout << "RULE: StatementSequence ::= Statement ; StatementSequence" << endl; }
 #line 1128 "parser.tab.c"
     break;
 
   case 4: /* Statement: Assignment  */
-#line 55 "ParserSpec.y"
+#line 55 "puckparser.y"
                { cout << "RULE: Statement ::= Assignment" << endl; }
 #line 1134 "parser.tab.c"
     break;
 
   case 5: /* Statement: WriteStatement  */
-#line 57 "ParserSpec.y"
+#line 57 "puckparser.y"
                { cout << "RULE: Statement ::= WriteStatement" << endl; }
 #line 1140 "parser.tab.c"
     break;
 
   case 6: /* Statement: IfStatement  */
-#line 59 "ParserSpec.y"
+#line 59 "puckparser.y"
                { cout << "RULE: Statement ::= IfStatement" << endl; }
 #line 1146 "parser.tab.c"
     break;
 
   case 7: /* Statement: WhileStatement  */
-#line 61 "ParserSpec.y"
+#line 61 "puckparser.y"
                { cout << "RULE: Statement ::= WhileStatement" << endl; }
 #line 1152 "parser.tab.c"
     break;
 
   case 8: /* WhileStatement: K_WHILE Expression K_DO StatementSequence K_END  */
-#line 64 "ParserSpec.y"
+#line 64 "puckparser.y"
                                                                  { cout << "RULE: WhileStatement ::= WHILE Expression DO StatementSequence END" << endl; }
 #line 1158 "parser.tab.c"
     break;
 
   case 9: /* IfStatement: K_IF Expression K_THEN StatementSequence K_END  */
-#line 67 "ParserSpec.y"
+#line 67 "puckparser.y"
                 { cout << "RULE: IfStatement ::= IF Expression THEN StatementSequence END" << endl; }
 #line 1164 "parser.tab.c"
     break;
 
   case 10: /* IfStatement: K_IF Expression K_THEN StatementSequence K_ELSE StatementSequence K_END  */
-#line 69 "ParserSpec.y"
+#line 69 "puckparser.y"
                 { cout << "RULE: IfStatement ::= IF Expression THEN StatementSequence ELSE StatementSequence END" << endl; }
 #line 1170 "parser.tab.c"
     break;
 
   case 11: /* WriteStatement: K_WRITE K_LPAREN Expression K_RPAREN  */
-#line 72 "ParserSpec.y"
+#line 72 "puckparser.y"
                   { cout << "RULE: WriteStatement ::= WRITE ( Expression )" << endl; }
 #line 1176 "parser.tab.c"
     break;
 
   case 12: /* Assignment: T_IDENT OP_ASSIGN Expression  */
-#line 75 "ParserSpec.y"
+#line 75 "puckparser.y"
                   { cout << "RULE: Assignment ::= identifier := Expression" << endl; }
 #line 1182 "parser.tab.c"
     break;
 
   case 13: /* Factor: T_INTEGER  */
-#line 77 "ParserSpec.y"
+#line 77 "puckparser.y"
                        { cout << "RULE: Factor ::= T_INTEGER" << endl; }
 #line 1188 "parser.tab.c"
     break;
 
   case 14: /* Factor: T_DECIMAL  */
-#line 78 "ParserSpec.y"
+#line 78 "puckparser.y"
                        { cout << "RULE: Factor ::= T_DECIMAL" << endl; }
 #line 1194 "parser.tab.c"
     break;
 
   case 15: /* Factor: T_STRING  */
-#line 79 "ParserSpec.y"
+#line 79 "puckparser.y"
                       { cout << "RULE: Factor ::= T_STRING" << endl; }
 #line 1200 "parser.tab.c"
     break;
 
   case 16: /* Factor: T_IDENT  */
-#line 80 "ParserSpec.y"
+#line 80 "puckparser.y"
                         { cout << "RULE: Factor ::= T_IDENT" << endl; }
 #line 1206 "parser.tab.c"
     break;
 
   case 17: /* Factor: K_LPAREN Expression K_RPAREN  */
-#line 81 "ParserSpec.y"
+#line 81 "puckparser.y"
                                       { cout << "RULE: Factor ::= K_LPAREN Expression K_RPAREN" << endl; }
 #line 1212 "parser.tab.c"
     break;
 
   case 18: /* Factor: OP_NEG Factor  */
-#line 82 "ParserSpec.y"
+#line 82 "puckparser.y"
                              { cout << "RULE: Factor ::= OP_NEG Factor" << endl; }
 #line 1218 "parser.tab.c"
     break;
 
   case 19: /* Term: Factor  */
-#line 84 "ParserSpec.y"
+#line 84 "puckparser.y"
                             { cout << "RULE: Term ::= Factor" << endl; }
 #line 1224 "parser.tab.c"
     break;
 
   case 20: /* Term: Factor OP_MULT Term  */
-#line 85 "ParserSpec.y"
+#line 85 "puckparser.y"
                             { cout << "RULE: Term ::= Factor OP_MULT Term" << endl; }
 #line 1230 "parser.tab.c"
     break;
 
   case 21: /* SimpleExpression: Term  */
-#line 87 "ParserSpec.y"
+#line 87 "puckparser.y"
                                                  { cout << "RULE: SimpleExpression ::= Term" << endl; }
 #line 1236 "parser.tab.c"
     break;
 
   case 22: /* SimpleExpression: Term OP_ADD SimpleExpression  */
-#line 88 "ParserSpec.y"
+#line 88 "puckparser.y"
                                                  { cout << "RULE: SimpleExpression ::= Term OP_ADD SimpleExpression" << endl; }
 #line 1242 "parser.tab.c"
     break;
 
   case 23: /* Expression: SimpleExpression  */
-#line 90 "ParserSpec.y"
+#line 90 "puckparser.y"
                                { cout << "RULE: Expression ::= SimpleExpression" << endl; }
 #line 1248 "parser.tab.c"
     break;
 
   case 24: /* Expression: SimpleExpression OP_RELATION Expression  */
-#line 91 "ParserSpec.y"
+#line 91 "puckparser.y"
                                                       { cout << "RULE: Expression ::= SimpleExpression OP_RELATION Expression" << endl; }
 #line 1254 "parser.tab.c"
     break;
@@ -1447,7 +1447,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 93 "ParserSpec.y"
+#line 93 "puckparser.y"
  //-- EPILOGUE --------------------------------------------- 
 // Bison error function  
 int yyerror(const char *p) 
@@ -1463,8 +1463,8 @@ int main()
   failcode = yyparse(); 
  
   if (failcode) 
-    cout << "INVALID!"; 
+    cout << "INVALID!" << endl; 
   else 
-    cout << "VALID"; 
+    cout << "VALID" << endl; 
   return 0; 
 } 
